@@ -3,20 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Playbook-S3-M05</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Playbook-S3-TM5</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <header>
-        <h1><span class="book-icon">📋</span> <strong>Playbook Misión 5: ¡Conectados a la Nube!</strong></h1>
+        <h1><span class="book-icon">📋</span> <strong>Playbook: Misión 5 - 3o de Secundaria</strong></h1>
         <div class="header-widgets">
             <div class="timer-container">
-                <span id="timer">⏱️ 00:00</span>
-                <button id="startStop">Start</button>
-                <button id="reset">Reset</button>
+                <span id="global-timer">⏱️ 40:00</span>
+                <button id="global-start-stop">Start</button>
+                <button id="global-reset">Reset</button>
             </div>
             <div class="theme-toggle">
                 <i class="fas fa-sun"></i>
@@ -28,7 +27,6 @@
             </div>
         </div>
     </header>
-
     <div class="main-container">
         <aside class="activity-list">
             <h2>Actividades</h2>
@@ -40,267 +38,408 @@
                 <li><a href="#activity-4">4</a></li>
                 <li><a href="#activity-5">5</a></li>
             </ul>
-
-            <div class="sidebar-info">
-                <p>💡 Esta misión introduce la arquitectura fundamental de un sistema IoT.</p>
-                <p>⏱️ Se proporcionan estimaciones de tiempo para cada actividad para ayudarle a mantener el rumbo.</p>
-            </div>
         </aside>
-
         <main class="content">
             <div class="progress-bar">
                 <div class="progress"></div>
             </div>
-
-            <button id="toggle-dialogues">Mostrar todos los diálogos</button>
-
-            <!-- SECCIÓN "DE UN VISTAZO" -->
+            <!-- ACTIVIDAD 0: DE UN VISTAZO -->
             <div class="activity-card" id="activity-0">
-                <h2><span class="book-icon">📝</span> De un Vistazo: Sesión Gnius</h2>
-                <p class="overview-subtitle">Resumen rápido de objetivos, materiales y preparación para el facilitador.</p>
-                <div class="overview-table-container">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th style="width: 50%;">Objetivos, Secuencia y Entregable</th>
-                                <th style="width: 50%;">Materiales Específicos y Preparación Previa</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <strong>Objetivos:</strong>
-                                    <ul>
-                                        <li>Que los estudiantes comprendan la arquitectura de un sistema IoT (Dispositivo > Red > Nube > Dashboard).</li>
-                                        <li>Que conceptualicen el rol de una API como una interfaz de comunicación.</li>
-                                        <li>Que utilicen Vibe Coding para generar e implementar un script Python que conecte su Micro:bit a Wi-Fi y envíe datos a SmartIOT.space.</li>
-                                    </ul>
-                                    <strong>Secuencia de Clase:</strong>
-                                    <ul>
-                                        <li><strong class="tactic-highlight">⚡A.I. GYM:</strong> Análisis profundo y contextualización de la misión con Xolo.</li>
-                                        <li><strong class="tactic-highlight">⚡VIBE CODING:</strong> Diseño de la intención y generación de código por IA.</li>
-                                        <li><strong class="tactic-highlight">⚡ANÁLISIS DE CÓDIGO:</strong> Lectura y comprensión guiada del código generado ("Taming the Genie").</li>
-                                        <li><strong class="tactic-highlight">⚡IMPLEMENTACIÓN Y DEBUGGING:</strong> Pruebas de hardware/software y depuración colaborativa con Xolo.</li>
-                                        <li><strong class="tactic-highlight">⚡GNIUS STORM:</strong> Showcase de proyectos, síntesis de "insights" y reflexión iterativa.</li>
-                                    </ul>
-                                    <strong>Entregable Clave:</strong>
-                                    <ul>
-                                        <li>Un script funcional en MicroPython que conecta la placa IOTbit a una red Wi-Fi.</li>
-                                        <li>Confirmación del envío exitoso de un paquete de datos a un 'topic' específico en la plataforma SmartIOT.space, verificado en el dashboard de la plataforma.</li>
-                                    </ul>
-                                </td>
-                                <td>
-                                    <strong>Materiales Específicos:</strong>
-                                    <ul>
-                                        <li>Proyector o pantalla interactiva.</li>
-                                        <li>Conexión a internet estable (Wi-Fi) con credenciales conocidas.</li>
-                                        <li>Acceso a MakeCode (<a href="https://makecode.microbit.org/" target="_blank">https://makecode.microbit.org/</a>) en modo Python.</li>
-                                        <li>Cuentas de estudiante para SmartIOT.space (usuario y API key).</li>
-                                        <li>Chat "Agente Gnius" (Xolo) operativo.</li>
-                                        <li>Presentación de diapositivas (Diapositivas 1-10).</li>
-                                        <li>1 Micro:bit v2 con placa IOTbit y cable USB por equipo de 2.</li>
-                                    </ul>
-                                    <strong>Preparación Previa para ESTA Sesión:</strong>
-                                    <ol>
-                                        <li><strong>Verificación del Entorno Digital y Físico (Interna):</strong>
-                                            <ul>
-                                                <li>Asegurar que la red Wi-Fi de la escuela esté funcionando y que las credenciales (SSID y contraseña) sean correctas.</li>
-                                                <li>Verificar que todos los estudiantes tengan sus credenciales de SmartIOT.space (usuario y API key) y sepan dónde encontrarlas.</li>
-                                                <li>Probar la conexión a SmartIOT.space desde una placa de prueba.</li>
-                                            </ul>
-                                        </li>
-                                        <li><strong>Familiarización Conceptual y Técnica:</strong> Repasar la arquitectura IoT y el concepto de API para poder reforzar las explicaciones. Entender la estructura del código generado, especialmente la sección de "parameterización".</li>
-                                        <li><strong>Preparación de la Demostración Práctica:</strong> Tener un proyecto 100% funcional que conecte y envíe un dato a SmartIOT.space, con el dashboard listo para mostrar la recepción del dato en tiempo real.</li>
-                                    </ol>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <h2><span class="book-icon">📝</span> De un Vistazo: Comando Central</h2>
+                <p class="overview-subtitle">Todo lo que necesitas para preparar y ejecutar esta misión en minutos.</p>
+                
+                <div class="command-section">
+                    <h3>🎯 Objetivo de Aprendizaje</h3>
+                    <div class="objective-box">
+                        <p><strong>Los estudiantes podrán:</strong> usar Micro:Bit y Smart Science IOT Kit para conectar dispositivos a la red y enviar datos a una API y comprender la arquitectura básica de IoT y la abstracción de APIs con IA.</p>
+                    </div>
+                </div>
+                <div class="command-section xolo-prompt">
+                    <h3>🤖 Prompt de Referencia para XOLO (Solo para Maestro)</h3>
+                    <div class="prompt-box">
+                        <div class="prompt-header">
+                            <span class="prompt-label">⚠️ NOTA: XOLO ya conoce el tema de esta misión. Este prompt es SOLO de referencia en caso de emergencia técnica:</span>
+                            <button class="copy-btn" onclick="copyPrompt('main-prompt')">
+                                <i class="fas fa-copy"></i> Copiar
+                            </button>
+                        </div>
+                        <pre id="main-prompt">Explicame la arquitectura básica de IoT (dispositivo → red → nube → visualización) y por qué conectarse a una API permite que los datos “vivan” fuera del dispositivo. Guíame para entender, a nivel conceptual, cómo la IA abstrae la complejidad de APIs (campos, endpoints, formatos) y ayuda a enfocarme en la intención (qué dato envío y para qué). Conecta esto con SmartIOT.space y el flujo de envío de datos por Wi-Fi usando Vibe Coding.</pre>
+                    </div>
+                </div>
+                <div class="command-section">
+                    <h3>⚡ Puntos Esenciales de la Misión</h3>
+                    <div class="essentials-grid">
+                        <div class="essential-card">
+                            <div class="essential-icon">🎓</div>
+                            <h4>Concepto Clave</h4>
+                            <p>Arquitectura IoT: Es el camino que siguen los datos desde un sensor físico hasta internet para que podamos verlos en cualquier parte del mundo.</p>
+                        </div>
+                        <div class="essential-card">
+                            <div class="essential-icon">🔧</div>
+                            <h4>Habilidad Técnica</h4>
+                            <p>Usar el kit de sensores para enviar información a la nube a través de Wi-Fi.</p>
+                        </div>
+                        <div class="essential-card">
+                            <div class="essential-icon">🧪</div>
+                            <h4>Experimentación</h4>
+                            <p>Probar con diferentes frecuencias de envío y tipos de datos para entender limitaciones de la red.</p>
+                        </div>
+                        <div class="essential-card">
+                            <div class="essential-icon">💬</div>
+                            <h4>Interacción con XOLO</h4>
+                            <p>XOLO ya conoce a cada estudiante y el tema de hoy. Solo abren el chat y comienzan a aprender. Tú guías el timing y motivación.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="command-section">
+                    <h3>📦 Checklist de Materiales</h3>
+                    <div class="materials-checklist">
+                        <label><input type="checkbox"> Proyector/pantalla + presentación (5 diapositivas)</label>
+                        <label><input type="checkbox"> Internet estable + Gnius Space con XOLO activo</label>
+                        <label><input type="checkbox"> Micro:Bit (1 por cada 2 estudiantes)</label>
+<label><input type="checkbox"> Smart Science IOT Kit (1 por cada 2 estudiantes)</label>
+                        <label><input type="checkbox"> Acceso a MakeCode (https://makecode.microbit.org/) con extensión IOT-Environment instalada</label>
+<label><input type="checkbox"> Acceso a SmartIOT (https://smartiot.space/)</label>
+                        <label><input type="checkbox"> Cables de conexión y baterías cargadas</label>
+                        <label><input type="checkbox"> ⚠️ Esta misión usa programación con BLOQUES en MakeCode</label>
+                        <label><input type="checkbox"> 📋 Para agregar extensión: En MakeCode -> Extensiones -> Buscar 'IOT-Environment' -> Agregar</label>
+                    </div>
+                    <p class="care-reminder"><strong>🛡️ Cuidado del equipo:</strong> Manipular con delicadeza, no mojar, verificar conexiones y desconectar al terminar.</p>
+                </div>
+                <div class="command-section">
+                    <h3>🗓️ Secuencia de la Misión (40 min)</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot">1</div>
+                            <div class="timeline-content">
+                                <strong>Intro a la Misión</strong>
+                                <span class="time-badge">2 min</span>
+                                <p>Bienvenida, I Can Statement y contexto de la misión.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot">2</div>
+                            <div class="timeline-content">
+                                <strong>A.I. Gym</strong>
+                                <span class="time-badge">8 min</span>
+                                <p>Los estudiantes abren el chat con XOLO y aprenden sobre la arquitectura básica de IoT (sin prompt específico).</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot">3</div>
+                            <div class="timeline-content">
+                                <strong>Brain Spark</strong>
+                                <span class="time-badge">20 min</span>
+                                <p>Idear, construir y experimentar un programa con XOLO.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot">4</div>
+                            <div class="timeline-content">
+                                <strong>Gnius STORM - Compartir</strong>
+                                <span class="time-badge">5 min</span>
+                                <p>Demostración y reflexión en parejas.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot">5</div>
+                            <div class="timeline-content">
+                                <strong>Entrega de Evidencias</strong>
+                                <span class="time-badge">5 min</span>
+                                <p>Subir capturas a Gnius Space y finalizar misión.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="command-section">
+                    <h3>🚨 Resolución Rápida de Problemas</h3>
+                    <div class="troubleshooting-list">
+                        <ul>
+                            <li><strong>Si los alumnos no pueden ingresar a Gnius Space:</strong> Activa XOLO SOS en <a href="https://xolo.gnius.club" target="_blank">xolo.gnius.club</a> para continuar la misión sin interrumpir la clase.</li>
+                            <li><strong>Si el Micro:Bit no se conecta al Wi-Fi:</strong> Verificar que el nombre de la red y la contraseña sean correctos. Asegurarse de que el módulo Wi-Fi esté bien conectado al kit.</li>
+<li><strong>Si los datos no aparecen en SmartIOT:</strong> Revisar que el ID del dispositivo en el código coincida con el de la plataforma. Verificar la conexión a internet.</li>
+<li><strong>Si hay errores en el código:</strong> Recordar a los estudiantes que XOLO puede ayudar a depurar. Pídeles que copien el error y se lo muestren a XOLO.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-            <!-- FIN DE LA SECCIÓN "DE UN VISTAZO" -->
-
+            <!-- ACTIVIDAD 1: INTRO A LA MISIÓN -->
             <div class="activity-card" id="activity-1">
-                <h2>⚡ Actividad 1: Saludo de IA y Contexto ⏰ 3 minutos</h2>
-                <p>Establecer el tono de la sesión, activar la IA y presentar el salto a la conectividad global.</p>
-                <div class="steps">
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 1: Bienvenida y Contexto Estratégico</h3>
-                            <p>(Proyectar Diapositiva 2) El facilitador da la bienvenida y presenta el enfoque de la misión.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">Buenos días, ingenieros. Hoy, nuestros proyectos trascienden los límites de esta sala. Vamos a conectar nuestras creaciones a la red global, al Internet de las Cosas (IoT). Lo que hagan aquí podrá, teóricamente, ser monitoreado desde cualquier parte del mundo.</p>
-                            </div>
-                        </div>
+                <div class="activity-header">
+                    <h2>🚀 Actividad 1: Intro a la Misión</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 2:00</span>
+                        <button class="timer-start-btn" data-duration="120">Iniciar</button>
                     </div>
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 2: Activación y Personalización de Xolo</h3>
-                            <p>El facilitador guía a los alumnos para que inicien su sesión de trabajo individual.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">Inicien su sesión con Xolo como de costumbre, compartiendo su perfil de aprendizaje e interés. Por ejemplo: <strong>'Hola Xolo. Soy Sara, perfil Biologista, me interesa monitorear ecosistemas.'</strong> Esto preparará a su socio de IA para la misión de hoy. Procedan.</p>
-                            </div>
-                        </div>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Dar la bienvenida con energía.</li>
+                            <li>Pedir a los alumnos que ingresen a Gnius Space.</li>
+                            <li>Proyecta diapositiva 1 con el I Can Statement.</li>
+                            <li>Motiva: "Hoy le daremos conexión global a sus proyectos de Micro:Bit".</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <ul>
+                            <li>XOLO ya está listo y conoce a cada estudiante.</li>
+                            <li>Sabe que hoy toca aprender sobre Arquitectura IoT y envío de datos a la nube.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Escucha la misión del día.</li>
+                            <li>Loguearse en Gnius Space.</li>
+                            <li>Preparación para trabajar en parejas.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 1: I Can Statement</h4>
+                    <div class="slide-content">
+                        <p><strong>🎯 Hoy seré capaz de:</strong></p>
+                        <p class="highlight-text">🤖 A conectar mi Micro:Bit a internet para que mis datos vivan en la nube.</p>
+                        <p><strong>Aplicación real:</strong> Los ingenieros en ciudades inteligentes usan esta tecnología para monitorear el tráfico y el clima en tiempo real.</p>
+                        <p><strong>Tu aliado:</strong> XOLO ya sabe qué vas a aprender hoy. ¡Solo abre el chat y comienza!</p>
                     </div>
                 </div>
             </div>
-
+            <!-- ACTIVIDAD 2: A.I. GYM -->
             <div class="activity-card" id="activity-2">
-                <h2>⚡ Actividad 2: "I Can Statement" y Presentación del Desafío ⏰ 3 minutos</h2>
-                <p>Clarificar la meta de aprendizaje enfocada en la conectividad y la arquitectura IoT.</p>
-                <div class="steps">
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 1: "I Can Statement" de Conectividad</h3>
-                            <p>(Proyectar Diapositiva 3) El facilitador presenta el objetivo de aprendizaje de la sesión.</p>
+                <div class="activity-header">
+                    <h2>🧠 Actividad 2: A.I. Gym</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 8:00</span>
+                        <button class="timer-start-btn" data-duration="480">Iniciar</button>
+                    </div>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Proyecta diapositiva 2.</li>
+                            <li>Indica: "Abran el chat con XOLO y salúdenlo. Él ya sabe qué les va a enseñar hoy."</li>
+                            <li>Circula para asegurar que todos interactúan con XOLO.</li>
+                            <li>Si alguien tiene dudas, recuérdale: "Pregúntale a XOLO, él te puede explicar de otra forma".</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <p class="xolo-status">✅ XOLO ACTIVO</p>
+                        <ul>
+                            <li>Reconoce al estudiante y sus preferencias de aprendizaje.</li>
+                            <li>Explica cómo viajan los datos desde el sensor hasta la visualización en la nube.</li>
+                            <li>Introduce el concepto de abstracción de APIs y cómo la IA facilita la conexión.</li>
+                            <li>Responde dudas sobre los conceptos.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Abrir el chat con XOLO y saludarlo.</li>
+                            <li>Aprender a usar el Smart Science IOT Kit para enviar datos.</li>
+                            <li>Aprender sobre la arquitectura de red y la nube.</li>
+                            <li>Despejar todas sus dudas preguntando a XOLO.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 2: A.I. GYM</h4>
+                    <div class="slide-content">
+                        <p><strong>💬 Abre el chat con XOLO y salúdalo:</strong></p>
+                        <div class="prompt-box">
+                            <pre>"¡Hola XOLO! Estoy listo para aprender."</pre>
                         </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">La meta de hoy es un hito. Al finalizar, podrán afirmar con total competencia: <strong>'Yo puedo explicar la arquitectura de un sistema IoT y puedo implementar un script Python para conectar mi dispositivo a la nube y enviarle datos.'</strong></p>
-                            </div>
-                        </div>
+                        <p class="highlight-text" style="margin-top: 1rem;">✨ XOLO ya sabe quién eres y qué tema toca hoy. ¡Solo empieza a conversar!</p>
+                        <p class="highlight-text">🎯 Objetivo: Aprender a usar el IOT Kit para enviar datos y comprender la arquitectura de red.</p>
+                    </div>
+                </div>
+                
+                <div class="optional-script">
+                    <button class="collapsible-button">📖 Ver guion detallado (opcional)</button>
+                    <div class="collapsible-content">
+                        <p class="dialogue assistant">Ahora vamos a dar un paso gigante: ¡conectaremos nuestros proyectos al mundo real! Abran el chat con XOLO y salúdenlo. XOLO ya los conoce y sabe exactamente qué les va a enseñar hoy sobre cómo los datos viajan por internet. No necesitan escribir un prompt especial, solo empiecen a platicar con él. Él les explicará cómo funciona la arquitectura IoT y por qué es tan importante que los datos vivan fuera del dispositivo. Pregúntenle todo lo que necesiten saber sobre SmartIOT y Wi-Fi.</p>
                     </div>
                 </div>
             </div>
-
+            <!-- ACTIVIDAD 3: BRAIN SPARK -->
             <div class="activity-card" id="activity-3">
-                <h2>⚡ Actividad 3: A.I. GYM (Arquitectura y APIs) ⏰ 12 minutos</h2>
-                <p>Facilitar una sesión de aprendizaje sobre la arquitectura IoT y el rol de las APIs, guiada por Xolo.</p>
-                <div class="steps">
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 1: Instrucción para el Aprendizaje Conceptual</h3>
-                            <p>(Proyectar Diapositiva 4) El facilitador dirige a los alumnos para que aprendan sobre la arquitectura IoT y las APIs con Xolo.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">Iniciamos el A.I. GYM. Para conectar un dispositivo a la nube, debemos entender la arquitectura. De forma individual, su primera tarea es pedirle a Xolo que les explique los componentes de un sistema IoT. Usen este prompt: <strong>'Xolo, desglosa la arquitectura de un sistema IoT.'</strong> Una vez que lo entiendan, hagan la siguiente pregunta: <strong>'Ahora explícame qué es una API y por qué es crucial para la comunicación en la nube.'</strong></p>
-                            </div>
-                        </div>
+                <div class="activity-header">
+                    <h2>💡 Actividad 3: Brain Spark</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 20:00</span>
+                        <button class="timer-start-btn" data-duration="1200">Iniciar</button>
                     </div>
-                     <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 2: Supervisión y Guía del Facilitador</h3>
-                            <p>(Proyectar Diapositiva 5) El facilitador circula, refuerza conceptos y sugiere preguntas de profundización.</p>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Proyecta la diapositiva 3.</li>
+                            <li>Indica: "Pidan a XOLO que los ayude a idear un proyecto. Cuando tengan su GCS, pásenlo a bloques en MakeCode, prueben en el simulador y luego con el hardware real".</li>
+                            <li>Entrega por parejas los Micro:Bits y Smart Science IOT Kits conforme los alumnos prueben su GCS en el simulador.</li>
+                            <li>Si hay errores, recuerda: "Pregúntenle a XOLO, él los ayuda a depurar".</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <p class="xolo-status">✅ XOLO ACTIVO</p>
+                        <ul>
+                            <li>Ayuda a desarrollar una idea y un VIBE que aplique el envío de datos a la nube.</li>
+                            <li>Entrega el GCS de la idea del genio.</li>
+                            <li>Resuelve errores de sintaxis o lógica.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Trabajar con XOLO una idea y un VIBE para usar el envío de datos por Wi-Fi.</li>
+                            <li>Traducir el GCS de XOLO a bloques en MakeCode.</li>
+                            <li>Depurar su programa con XOLO si hay errores.</li>
+                            <li>Conectar el módulo Wi-Fi al Micro:Bit y probar el envío.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 3: Brain Spark</h4>
+                    <div class="slide-content">
+                        <p><strong>1. 💬 Pide a XOLO que te ayude a crear:</strong></p>
+                        <div class="prompt-box">
+                            <pre>"Ayúdame a idear un primer envío de datos a la nube desde Micro:bit (ej. un valor fijo o simulado) con una vibe clara (bienvenida, prueba de conexión, latido del sistema). Guíame para definir qué dato enviaré, con qué frecuencia y cómo verificaré que llegó a SmartIOT.space. Luego indícame el plan paso a paso para implementar y validar la conexión."</pre>
                         </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">(Mientras circula) "Veo que Xolo les está explicando la analogía de la API como un menú de restaurante. Es una excelente forma de verlo. Para profundizar, pregúntenle: <strong>'Xolo, si la API es el menú, ¿qué sería la 'API Key' en esa analogía?'</strong> O también: <strong>'¿Qué pasa si le hago a la API una petición que no está en el menú?'</strong> El objetivo es entender que las APIs tienen reglas y sistemas de seguridad."</p>
-                            </div>
-                        </div>
+                        <p style="margin-top: 1.5rem;"><strong>2. 🔬 Experimenta y descubre con tu programa:</strong></p>
+                        <ul>
+                            <li>¿Funciona como esperabas el envío de datos?</li>
+                            <li>¿Qué pasa si desconectas el módulo Wi-Fi mientras el programa corre?</li>
+                            <li>¿Funciona igual enviando datos cada segundo vs cada 10 segundos?</li>
+                            <li>¿Cómo ayuda la IA a que no tengamos que preocuparnos por la complejidad técnica de las APIs?</li>
+                            <li>Si usamos Vibe Coding para la conectividad, ¿cómo cambia nuestra forma de pensar en el proyecto?</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="optional-script">
+                    <button class="collapsible-button">📖 Ver guion detallado (opcional)</button>
+                    <div class="collapsible-content">
+                        <p class="dialogue assistant">¡Es hora de crear! Vamos a realizar nuestro primer envío de datos a la nube. Sigan el flujo: primero ideen con XOLO, definan su VIBE, obtengan su GCS y pásenlo a MakeCode. Un ejemplo genial sería crear un 'latido del sistema' que envíe un valor cada vez que presionen un botón. Una vez que vean que funciona en el simulador, les entregaré el hardware para la prueba real. Recuerden revisar las preguntas de experimentación para ver qué sucede con la frecuencia de envío. Si tienen errores o dudas, pregúntenle a XOLO, él los ayudará a depurar.</p>
+                    </div>
+                </div>
+                <div class="challenge-prompt">
+                    <h4>🚀 Prompt de Desafío (para quienes terminen rápido)</h4>
+                    <div class="prompt-box">
+                        <p><strong>Si ya experimentaste con todo, pregunta a XOLO:</strong></p>
+                        <p class="challenge-text">"Ya probé con el envío de datos básicos. ¿Puedes enseñarme cómo hacer que mi Micro:Bit envíe datos de un sensor real del kit y los visualice en una gráfica en SmartIOT?"</p>
                     </div>
                 </div>
             </div>
-
+            <!-- ACTIVIDAD 4: GNIUS STORM - COMPARTIR -->
             <div class="activity-card" id="activity-4">
-                 <h2>⚡ Actividad 4: Brain Spark (Conectividad y Depuración) ⏰ 20 minutos</h2>
-                <p>Los estudiantes aplican sus conocimientos en un desafío práctico de conectividad, parametrización y depuración en parejas.</p>
-                <div class="steps">
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 1: Presentación del Desafío y Formación de Parejas</h3>
-                             <p>(Proyectar Diapositiva 6) El facilitador presenta el desafío de conectividad y da la instrucción de formar parejas.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">Ahora, a la práctica. Formen sus parejas. El primer paso para cualquier proyecto IoT es establecer la conexión. Su 'vibe' de hoy será simple pero crucial: conectar su IOTbit a la red Wi-Fi de la escuela y enviar un solo dato para confirmar que la conexión funciona.</p>
-                            </div>
-                        </div>
+                <div class="activity-header">
+                    <h2>⚡ Actividad 4: Gnius STORM - Compartir y Reflexionar</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 5:00</span>
+                        <button class="timer-start-btn" data-duration="300">Iniciar</button>
                     </div>
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 2: Diseño de la "Vibe" y Generación de Código</h3>
-                            <p>(Proyectar Diapositiva 7) Las parejas comunican su 'vibe' a Xolo, incluyendo sus credenciales, para generar el código.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                 <p class="dialogue assistant">Describan esta 'vibe' a Xolo, asegurándose de incluir el nombre de la red y la contraseña que les he proporcionado. Por ejemplo: <strong>'Xolo, nuestra vibe es: conectar a la red "Escuela_WiFi" con contraseña "Clave12345". Después, queremos enviar el número 200 al topic "status".'</strong> Xolo generará el código y ustedes deberán insertar sus credenciales personales de SmartIOT.</p>
-                            </div>
-                        </div>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Organiza las parejas para compartir.</li>
+                            <li>Gestiona los tiempos: 2 min demo + 2 min reflexión + 1 min cierre.</li>
+                            <li>Facilita retroalimentación constructiva.</li>
+                            <li>Cierra con reflexión sobre aplicaciones reales.</li>
+                        </ul>
                     </div>
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 3: Análisis y "Taming the Genie"</h3>
-                             <p>(Proyectar Diapositiva 8) Las parejas analizan el código, identificando las áreas de parametrización.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                 <p class="dialogue assistant">Ahora, analicen el código. No necesitan entender cada detalle del protocolo, pero sí deben identificar las áreas clave. Localicen en su código: ¿dónde ponen sus credenciales de Wi-Fi? ¿Dónde van sus credenciales de SmartIOT? Y, ¿dónde se define el dato que se envía? Esta separación de configuración y lógica es una práctica profesional clave llamada parametrización.</p>
-                            </div>
-                        </div>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <p class="xolo-status">⏸️ XOLO EN ESPERA</p>
+                        <ul>
+                            <li>Disponible solo si hay dudas finales urgentes.</li>
+                        </ul>
                     </div>
-                     <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 4: Implementación y Depuración de Red</h3>
-                             <p>(Proyectar Diapositiva 9) Las parejas implementan el código y aprenden a depurar problemas de conectividad de forma sistemática.</p>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Demuestra su programa funcionando a otra pareja.</li>
+                            <li>Explica qué datos se enviaron y cómo se visualizaron en la nube.</li>
+                            <li>Comparte un descubrimiento interesante.</li>
+                            <li>Da retroalimentación positiva al compañero.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 4: Think-Pair-Share</h4>
+                    <div class="slide-content tps-structure">
+                        <div class="tps-phase">
+                            <h4>🤔 THINK (30 seg)</h4>
+                            <p>Reflexión individual: ¿Qué datos envió mejor tu Micro:Bit? ¿Qué te sorprendió de ver la información en la web?</p>
                         </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                 <p class="dialogue assistant">Implementen el código y observen el resultado. Si el Micro:bit muestra una 'X', la conexión falló. La depuración de redes es un proceso de eliminación. Describan el fallo a Xolo. Por ejemplo: <strong>'Xolo, no se conecta al Wi-Fi, muestra una X. Ya verificamos la contraseña.'</strong> Él los guiará por un protocolo sistemático: verificar credenciales al 100%, intensidad de señal y posibles conflictos de red.</p>
-                            </div>
+                        <div class="tps-phase">
+                            <h4>👥 PAIR (2 min)</h4>
+                            <p>Con otra pareja: Demuestren su programa y expliquen su experiencia</p>
+                            <p class="highlight-text">Frase guía: "Mi Micro:Bit envió datos de prueba a SmartIOT. Me sorprendió que la conexión fuera tan rápida."</p>
+                        </div>
+                        <div class="tps-phase">
+                            <h4>💬 SHARE (2 min)</h4>
+                            <p>Retroalimentación mutua y cierre del maestro.</p>
                         </div>
                     </div>
                 </div>
             </div>
-
+            <!-- ACTIVIDAD 5: ENTREGA DE EVIDENCIAS -->
             <div class="activity-card" id="activity-5">
-                <h2>⚡ Actividad 5: Gnius STORM (Reflexión) ⏰ 5 minutos</h2>
-                <p>El facilitador modera una reflexión final enfocada en el proceso de abstracción y depuración de conectividad.</p>
-                <div class="steps">
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 1: Gnius STORM (Think - Individual)</h3>
-                            <p>(Proyectar Diapositiva 10) Instrucción para la reflexión individual.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">Bien, para cerrar, nuestro Think-Pair-Share. Individualmente, un minuto para pensar: ¿Cuál fue la parte más 'mágica' o abstracta del código que Xolo generó hoy, esa parte que se alegran de no tener que escribir a mano?</p>
-                            </div>
-                        </div>
+                <div class="activity-header">
+                    <h2>✅ Actividad 5: Entrega de Evidencias</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 5:00</span>
+                        <button class="timer-start-btn" data-duration="300">Iniciar</button>
                     </div>
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 2: Gnius STORM (Pair - Parejas)</h3>
-                            <p>Los alumnos comparten sus reflexiones con su compañero de equipo.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">Ahora, en parejas, discutan durante dos minutos: ¿Por qué es útil que una IA como Xolo se encargue de la complejidad de la conexión a la red? ¿Qué les permite hacer a ustedes como desarrolladores?</p>
-                            </div>
-                        </div>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Proyecta diapositiva 5 con las instrucciones.</li>
+                            <li>Guía a los estudiantes para tomar las capturas.</li>
+                            <li>Asegura que todos suban sus evidencias a Gnius Space.</li>
+                            <li>Felicita al grupo por completar la misión.</li>
+                        </ul>
                     </div>
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 3: Gnius STORM (Share & Synthesis)</h3>
-                            <p>Algunas parejas comparten sus desafíos y el facilitador cierra la sesión.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">Para finalizar, escuchemos de algunas parejas. ¿Cuál fue su mayor desafío de hoy? ¿La conceptualización de la arquitectura, la depuración de las credenciales, o entender el flujo de datos? (Escuchar 2-3 respuestas). Felicidades. Sus dispositivos ya no son islas; son ciudadanos de la red global. Han implementado una arquitectura IoT fundamental. En la próxima misión, dejaremos de enviar datos estáticos y comenzaremos a enviar lecturas de sensores del mundo real.</p>
-                            </div>
-                        </div>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <p class="xolo-status">⭕ XOLO FINALIZADO</p>
+                        <ul>
+                            <li>La interacción con XOLO ha terminado para esta misión.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Tomar screenshot de su código en MakeCode.</li>
+                            <li>Tomar screenshot de su conversación con XOLO.</li>
+                            <li>Subir ambas evidencias a Gnius Space.</li>
+                            <li>Dar click en "Finalizar Misión".</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 5: ¡Misión Cumplida!</h4>
+                    <div class="slide-content">
+                        <p><strong>📸 Para terminar, sube tus evidencias a Gnius Space:</strong></p>
+                        <ol>
+                            <li>Una captura de pantalla de tu programa final en <strong>MakeCode</strong>.</li>
+                            <li>Una captura de pantalla de tu conversación con <strong>XOLO</strong> donde te dio tu GCS.</li>
+                        </ol>
+                        <p class="highlight-text" style="margin-top: 1rem;">¡No olvides dar click en el botón <strong>"Finalizar Misión"</strong> cuando termines!</p>
                     </div>
                 </div>
             </div>
         </main>
     </div>
-
     <script src="script.js"></script>
 </body>
 </html>
